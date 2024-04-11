@@ -43,7 +43,7 @@
                 stroke-width="10"
               ></path>
             </svg>
-            Appalachian Grapplers Association
+            <span id="header-text" class="text-xl sm:text-2xl">Appalachian Grapplers Association</span>
           </a>
         </div>
         <div class="block lg:hidden pr-4">
@@ -310,6 +310,7 @@
                   stroke-width="10"
                 ></path>
               </svg>
+              <br \>
               Appalachian Grapplers Association
             </a>
           </div>
@@ -351,6 +352,7 @@
     <script>
       var scrollpos = window.scrollY;
       var header = document.getElementById("header");
+      var headerText = document.getElementById("header-text");
       var navcontent = document.getElementById("nav-content");
       var navaction = document.getElementById("navAction");
       var brandname = document.getElementById("brandname");
@@ -360,21 +362,18 @@
       document.addEventListener("scroll", function () {
         /*Apply classes for slide in bar*/
         scrollpos = window.scrollY;
-    
+
         if (scrollpos > 10) {
           header.classList.add("bg-white");
           navaction.classList.remove("bg-white");
           navaction.classList.add("gradient");
           navaction.classList.remove("text-gray-800");
           navaction.classList.add("text-white");
+
           //Use to switch toggleColour colours
           for (var i = 0; i < toToggle.length; i++) {
             toToggle[i].classList.add("text-gray-800");
             toToggle[i].classList.remove("text-white");
-          }
-          //Change mountain fill color to black
-          for (var i = 0; i < mountainPeaks.length; i++) {
-            mountainPeaks[i].setAttribute("fill", "black");
           }
           header.classList.add("shadow");
           navcontent.classList.remove("bg-gray-100");
@@ -390,15 +389,41 @@
             toToggle[i].classList.add("text-white");
             toToggle[i].classList.remove("text-gray-800");
           }
-          //Change mountain fill color back to white
-          for (var i = 0; i < mountainPeaks.length; i++) {
-            mountainPeaks[i].setAttribute("fill", "white");
-          }
           header.classList.remove("shadow");
           navcontent.classList.remove("bg-white");
           navcontent.classList.add("bg-gray-100");
         }
       });
+
+      function changeHeaderOnScroll() {
+        var scrollpos = window.scrollY;
+    
+        if (scrollpos > 10) {
+          header.classList.add("bg-white");
+          headerText.style.color = "black";
+          header.classList.add("shadow");
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-gray-800");
+            toToggle[i].classList.remove("text-white");
+          }
+          for (var i = 0; i < mountainPeaks.length; i++) {
+            mountainPeaks[i].setAttribute("fill", "black");
+          }
+        } else {
+          header.classList.remove("bg-white");
+          headerText.style.color = "white";
+          header.classList.remove("shadow");
+          for (var i = 0; i < toToggle.length; i++) {
+            toToggle[i].classList.add("text-white");
+            toToggle[i].classList.remove("text-gray-800");
+          }
+          for (var i = 0; i < mountainPeaks.length; i++) {
+            mountainPeaks[i].setAttribute("fill", "white");
+          }
+        }
+      }
+    
+      window.addEventListener("scroll", changeHeaderOnScroll);
     </script>
     <script>
       /*Toggle dropdown list*/
