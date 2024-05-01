@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>code_of_conduct.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="appalachian-grapplers-association">Appalachian Grapplers Association</h1>
+<h1 id="code-of-conduct">Code of Conduct</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This Code of Conduct outlines the expectations for all members and participants involved with the Appalachian Grapplers Association, including but not limited to students, instructors, and board members. It serves to promote a safe, respectful, and positive environment for everyone.</p>
+<h2 id="safety-and-health">Safety and Health</h2>
+<ul>
+<li>Members must prioritize their own safety and the safety of others during training and competitions.</li>
+<li>Any form of physical or emotional abuse is unacceptable.</li>
+<li>While Jiu Jitsu itself is a form of controlled physical engagement, it's important to distinguish between grappling and prohibited conduct. Members must understand the difference between martial arts training and behavior that is considered physical abuse.</li>
+<li>Not respecting a tap is grounds for immediate expulsion.</li>
+<li>Members should report any unsafe conditions or practices to the instructors or board members.</li>
+<li>Members are encouraged to maintain good personal hygiene, including clean training attire, trimmed nails, and the use of deodorant.</li>
+<li>Members should refrain from training when they have contagious illnesses or open wounds to prevent the spread of infections.</li>
+<li>Members are encouraged to use appropriate safety equipment, such as mouthguards and protective gear, during training and competition.</li>
+<li>The Appalachian Grapplers Association will provide guidance and instruction on proper training techniques and safety protocols to minimize the risk of injury.</li>
+<li>Members are expected to follow the guidance of instructors and adhere to safety protocols at all times.</li>
+</ul>
+<h2 id="assumption-of-risk">Assumption of Risk</h2>
+<ul>
+<li>Members acknowledge that the practice of Jiu Jitsu and other grappling arts involves inherent risks of injury, including but not limited to bruises, sprains, strains, fractures, concussions, and other physical or mental injuries.</li>
+<li>By participating in the Appalachian Grapplers Association's activities, members assume full responsibility for any and all risks, injuries, or damages, known or unknown, which might occur as a result of their participation.</li>
+</ul>
+<h2 id="waiver-and-release-of-liability">Waiver and Release of Liability</h2>
+<ul>
+<li>Members agree to release, waive, discharge, and covenant not to sue the Appalachian Grapplers Association, its officers, directors, instructors, and other members for any injury, loss, or damage arising out of their participation in the association's activities.</li>
+<li>This waiver and release of liability shall be governed by the laws of the state in which the participant is present under the auspices of the organization.</li>
+</ul>
+<h2 id="insurance">Insurance</h2>
+<ul>
+<li>The Appalachian Grapplers Association maintains general liability insurance to protect the organization from claims of negligence.</li>
+<li>Members are encouraged to maintain their own health insurance coverage to cover any injuries or illnesses that may occur during their participation in the association's activities.</li>
+</ul>
+<h2 id="general-behavior">General Behavior</h2>
+<ul>
+<li>Members shall conduct themselves with integrity, respect, and sportsmanship at all times.</li>
+<li>Discrimination, harassment, and abusive language or behavior are strictly prohibited.</li>
+<li>All members are expected to adhere to the principles of fair play and mutual respect in and out of practice sessions.</li>
+</ul>
+<h2 id="respect-for-facilities-and-equipment">Respect for Facilities and Equipment</h2>
+<ul>
+<li>Members shall treat training facilities and equipment with respect and care.</li>
+<li>Members are responsible for cleaning up after themselves, reporting any damage or issues, and contributing to maintaining a tidy and well-organized training space.</li>
+</ul>
+<h2 id="social-media-and-online-conduct">Social Media and Online Conduct</h2>
+<ul>
+<li>Members shall maintain respectful and professional behavior on social media platforms and online forums associated with the Appalachian Grapplers Association.</li>
+<li>Members shall respect the privacy of other members in online settings.</li>
+</ul>
+<h2 id="inclusion-and-non-discrimination">Inclusion and Non-Discrimination</h2>
+<ul>
+<li>The Appalachian Grapplers Association welcomes members regardless of race, color, national origin, age, disability, sex, gender identity, religion, reprisal, and where applicable, political beliefs, marital status, familial or parental status, or sexual orientation.</li>
+</ul>
+<h2 id="visitor-and-spectator-conduct">Visitor and Spectator Conduct</h2>
+<ul>
+<li>Visitors and spectators at Appalachian Grapplers Association events or training sessions shall respect the training space, refrain from disruptive behavior, and follow any additional rules or guidelines set by the association.</li>
+</ul>
+<h2 id="medical-conditions-and-clearance">Medical Conditions and Clearance</h2>
+<ul>
+<li>Members are responsible for disclosing any pre-existing medical conditions that may affect their ability to train safely or that may require special accommodations.</li>
+<li>The Appalachian Grapplers Association reserves the right to require a doctor's clearance for any member with a known medical condition that could pose a risk to themselves or others during training.</li>
+<li>Members who have been away from training due to injury or illness may be required to provide a doctor's clearance before returning to full participation.</li>
+<li>The Appalachian Grapplers Association will make reasonable efforts to accommodate members with medical conditions or disabilities, in accordance with applicable laws and regulations.</li>
+<li>Members are encouraged to consult with their healthcare provider before beginning or resuming any physical training program.</li>
+</ul>
+<h2 id="compliance-with-laws-and-policies">Compliance with Laws and Policies</h2>
+<ul>
+<li>Members shall comply with all applicable laws, as well as the policies and procedures set forth by the association.</li>
+<li>Use or distribution of illegal substances is not tolerated on any property or event associated with the association.</li>
+</ul>
+<h2 id="conflict-resolution">Conflict Resolution</h2>
+<ul>
+<li>Any disputes or conflicts should be resolved through peaceful and respectful dialogue.</li>
+<li>Members are encouraged to seek the assistance of a board member or designated mediator if needed.</li>
+</ul>
+<h2 id="conduct-outside-of-the-training-environment">Conduct Outside of the Training Environment</h2>
+<ul>
+<li>Members are expected to maintain a high standard of conduct and respect for others, even when they are not actively participating in Appalachian Grapplers Association activities or events.</li>
+<li>Members should refrain from engaging in any behavior that could reflect poorly on the association or jeopardize the safety and well-being of other members, even if such behavior occurs outside of the training environment.</li>
+<li>The Appalachian Grapplers Association reserves the right to take disciplinary action against members who engage in serious misconduct outside of the training environment, if such conduct is deemed to be detrimental to the association's reputation or the welfare of its members.</li>
+<li>Examples of serious misconduct may include, but are not limited to, criminal activity, sexual assault or harassment, hate speech, or any other behavior that violates the principles of respect, integrity, and non-discrimination outlined in this Code of Conduct.</li>
+</ul>
+<h2 id="reporting-violations">Reporting Violations</h2>
+<ul>
+<li>Violations of the Code of Conduct should be reported to the Board of Directors.</li>
+<li>Reports will be handled with confidentiality and discretion, and appropriate action will be taken.</li>
+</ul>
+<h2 id="enforcement">Enforcement</h2>
+<ul>
+<li>The Board of Directors reserves the right to take disciplinary action against any member found to be in violation of the Code of Conduct.</li>
+<li>Actions may include suspension, expulsion, or other measures deemed necessary.</li>
+</ul>
+<h2 id="acknowledgment">Acknowledgment</h2>
+<ul>
+<li>By participating in the Appalachian Grapplers Association, members agree to abide by this Code of Conduct and the values it represents.</li>
+</ul>
+<h2 id="amendments">Amendments</h2>
+<ul>
+<li>This Code of Conduct may be amended by the Board of Directors as necessary to reflect the evolving needs of the association and its members.</li>
+</ul>
+
+</body>
+</html>

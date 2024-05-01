@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>bylaws.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="appalachian-grapplers-association-inc">Appalachian Grapplers Association, Inc.</h1>
+<h1 id="bylaws">Bylaws</h1>
+<h2 id="article-i-name-and-mission">Article I: Name and Mission</h2>
+<p><strong>Section 1.1 Name</strong></p>
+<p>The name of the organization shall be Appalachian Grapplers Association, Inc.</p>
+<p><strong>Section 1.2 Mission</strong></p>
+<p>The mission of the Appalachian Grapplers Association, Inc. is to provide accessible, low-cost Jiu Jitsu and grappling instruction, facilities, and equipment for individuals aged 16 and above in the Appalachian region. As a club, we foster a network of communities with loose affiliations, allowing us to operate independently from traditional Jiu Jitsu school hierarchies and financial obligations. This structure enables us to focus on the fundamental principles and techniques of grappling and the well-being of our members. Through our supportive, interconnected communities and commitment to effective training, we promote physical wellness, personal development, resilience, and connection among our participants.</p>
+<h2 id="article-ii-membership">Article II: Membership</h2>
+<p><strong>Section 2.1 Eligibility</strong></p>
+<p>Membership is open to individuals aged 16 and above who are interested in learning and practicing Brazilian Jiu Jitsu and other grappling arts.</p>
+<p><strong>Section 2.2 Obligations</strong></p>
+<p>All members must adhere to the association's code of conduct and fulfill any obligations as outlined upon joining.</p>
+<h2 id="article-iii-board-of-directors">Article III: Board of Directors</h2>
+<p><strong>Section 3.1 Composition</strong></p>
+<p>The Board of Directors shall consist of at least five members who are recognized by their peers as experienced practitioners in various forms of grappling, not limited to Brazilian Jiu Jitsu.</p>
+<p><strong>Section 3.2 Term of Office</strong></p>
+<p>Directors serve a term of two years and may be reelected at the end of their term.</p>
+<p><strong>Section 3.3 Selection of Directors</strong></p>
+<p>The Board of Directors shall be responsible for identifying, nominating, and electing new board members through a process of self-perpetuation. The board may establish a Nomination Committee, consider recommendations from current board members, issue an open call for applications, or solicit recommendations from key stakeholders.</p>
+<p><strong>Section 3.4 Removal and Vacancies</strong></p>
+<p>Directors may be removed by a majority vote of the board.</p>
+<p>Vacancies shall be filled by appointment by the remaining directors until the next annual meeting.</p>
+<p><strong>Section 3.5 Powers and Duties</strong></p>
+<p>The board is empowered to govern the association, set policy, oversee financial affairs, and make decisions critical to the operation of the association. The board is also responsible for ensuring the association adheres to its mission and bylaws.</p>
+<p><strong>Section 3.6 Meetings and Quorum</strong></p>
+<p>Board meetings require a quorum of at least a majority of directors to conduct official business. Decisions at meetings are made by a majority vote of the directors present.</p>
+<h2 id="article-iv-officers">Article IV: Officers</h2>
+<p><strong>Section 4.1 Positions</strong></p>
+<p>The officers of the Appalachian Grapplers Association shall be a President, Vice-President, Secretary, Treasurer, and one Member-at-Large elected by the Board of Directors from among its members.</p>
+<p><strong>Section 4.2 Term of Office</strong></p>
+<p>Officers serve a term of two years and may be re-elected for consecutive terms.</p>
+<p><strong>Section 4.3 Removal and Vacancies</strong></p>
+<p>An officer may be removed from their position by a majority vote of the board for failure to perform duties or for conduct detrimental to the association. In the event of a vacancy, the Board of Directors will appoint another officer to fill the position until the next annual meeting.</p>
+<h2 id="article-v-meetings">Article V: Meetings</h2>
+<p><strong>Section 5.1 Annual Meeting</strong></p>
+<p>The board shall convene for an annual meeting to conduct the business of the association.</p>
+<p><strong>Section 5.2 Regular Meetings</strong></p>
+<p>The board shall meet as needed to conduct the business of the association.</p>
+<p><strong>Section 5.3 Notice and Quorum</strong></p>
+<p>Notice for meetings must be provided to all board members at least one week in advance. A quorum for any meeting shall consist of a majority of the board members. Decisions at meetings require a majority vote of the board members present.</p>
+<h2 id="article-vi-conflict-of-interest">Article VI: Conflict of Interest</h2>
+<p>Any director who has a financial interest in a matter before the board must disclose that interest and abstain from voting on the matter. The board shall adopt and regularly review a comprehensive conflict of interest policy.</p>
+<h2 id="article-vii-financial-provisions">Article VII: Financial Provisions</h2>
+<p><strong>Section 7.1 Fiscal Year</strong></p>
+<p>The fiscal year of the organization shall be determined by the Board of Directors.</p>
+<p><strong>Section 7.2 Financial Management</strong></p>
+<p>The Treasurer is responsible for managing the association's finances, including budgeting, handling of funds, and financial reporting. Financial records are to be kept in an orderly fashion and made available for review by the board.</p>
+<p><strong>Section 7.3 Financial Reporting</strong></p>
+<p>Financial reporting shall be conducted at least annually, with a report to be delivered at the annual meeting.</p>
+<h2 id="article-viii-indemnification">Article VIII: Indemnification</h2>
+<p>The association shall indemnify and hold harmless its directors and officers from and against any and all claims, damages, liabilities, costs, and expenses, including reasonable attorneys' fees, arising out of or in connection with the performance of their duties for the nonprofit, to the fullest extent permitted by law.</p>
+<h2 id="article-ix-amendments">Article IX: Amendments</h2>
+<p>Amendments to the bylaws may be proposed by any director and adopted by a two-thirds majority vote of the board at any meeting where a quorum is present.</p>
+<h2 id="article-x-dissolution">Article X: Dissolution</h2>
+<p>In the event of dissolution, the nonprofit shall follow the procedures mandated by state law and adhere to IRS regulations for the distribution of assets. Any remaining assets shall be distributed to another nonprofit organization with a similar mission or as directed by a court of law, provided such distribution is consistent with our status as a 501(c)(3) organization.</p>
+
+</body>
+</html>
