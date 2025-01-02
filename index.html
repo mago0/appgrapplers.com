@@ -8,7 +8,7 @@
       Appalachian Grapplers Association
     </title>
     <meta name="description" content="Appalachian Grapplers Association, Inc. A 501(c)3 Non-Profit organization dedicated to Jiu Jitsu and grappling instruction." />
-    <meta name="keywords" content="Appalachian Grapplers, Jiu Jitsu, Grappling, Martial Arts, Non-Profit, Grapplers Association, Appalachian Region" />
+    <meta name="keywords" content="Appalachian Grapplers, BJJ, Jiu Jitsu, Jiu-Jitsu, Gi, NoGi, No-Gi, Grappling, Submission Grappling, Martial Arts, Non-Profit, Grapplers Association, Appalachian Region" />
     <meta name="author" content="Appalachian Grapplers Association" />
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
@@ -91,6 +91,7 @@
           <p class="leading-normal text-2xl mb-8">
             Jiu Jitsu Classes and open mat sessions at our Mt. Airy location.
           </p>
+          </p>
           <a href="#pricing" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out inline-block text-center">
             Join Us
           </a>
@@ -168,6 +169,52 @@
         </div>
       </div>
     </section>
+
+    <!-- Testimonial Section -->
+    <section class="bg-gray-100 py-8">
+      <div class="container max-w-5xl mx-auto m-8">
+        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+          Testimonials
+        </h2>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        <div class="relative w-full overflow-hidden">
+          <div id="testimonials" class="flex transition-transform duration-1000 ease-in-out">
+            <div class="w-full flex-shrink-0 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <p class="text-gray-600 mb-4">"I started training at AGA for the first time in May of 2024. I am 49 years old and having never trained in wrestling or jiu jitsu, I was a bit nervous and scared but I can honestly say that everyone there took me under their wings. The instructors are knowledgeable, supportive and they absolutely do it for the love of Jiu Jitsu and it shows! The atmosphere is encouraging and attitudes are positive. I have absolutely had a blast learning and watching my body change and adapt to BJJ. If you are looking to learn self-defense, get physically fit, start a new hobby or compete in BJJ tournaments, AGA is the place for you. Seriously nothing but Good Vibes and I highly recommend this place. I’m so glad I started my journey with these fine folks. Come on out and join us in 2025!"</p>
+                <p class="text-gray-800 font-bold">- Brandon</p>
+              </div>
+            </div>
+            <div class="w-full flex-shrink-0 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <p class="text-gray-600 mb-4">"I have been training various styles of martial arts for 25+ years and wanted to add Ju Jitsu to my skill set without getting beat up as i am in my early 60's. The teachers and students here are really a great group taking the time to teach and drill!!! in the short time here i can say i have learn more than i have at any other schools because these folks take the time to teach and apply those skills. The other item that impacts us as students is our fee - they offer several options that divinely fit into everyone budget so we can be here long term. I would recommend this school to everyone!!!!!!"</p>
+                <p class="text-gray-800 font-bold">- James</p>
+              </div>
+            </div>
+            <div class="w-full flex-shrink-0 p-4">
+              <div class="bg-white rounded-lg shadow-lg p-6">
+                <p class="text-gray-600 mb-4">"My 17 year old daughter and 15 year old son love coming to class every chance they get! They have great instructors who are hands on so my kids get a lot of one on one training and techniques. It has definitely elevated my kids grappling to another level! They get experience grappling opponents of all ages so they have to adjust to each one’s skillset. It’s a fun friendly atmosphere that I would encourage any parents to bring their kids to!"</p>
+                <p class="text-gray-800 font-bold">- Jamie</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      let currentIndex = 0;
+      const testimonials = document.getElementById('testimonials');
+      const testimonialCount = testimonials.children.length;
+
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % testimonialCount;
+        testimonials.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }, 10000);
+    </script>
+
+    <!-- Location Section -->
     <section class="bg-white border-b py-8">
       <div class="container max-w-5xl mx-auto m-8">
         <h2 id="location" class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
@@ -195,6 +242,8 @@
         </div>
       </div>
     </section>
+
+    <!-- Pricing Section -->
     <section class="bg-gray-100 py-8">
       <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
         <h2 id="pricing" class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
@@ -203,6 +252,7 @@
         <div class="w-full mb-4">
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
+        <p class="text-center text-gray-600 mb-8 text-xl font-bold">We accept members aged 14 and up. Those under 18 require registration and consent from a legal guardian.</p>
         <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
           <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
             <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
@@ -276,6 +326,7 @@
       </div>
       </div>
     </section>
+
     <!-- Change the colour #f8fafc to match the previous section colour -->
     <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
